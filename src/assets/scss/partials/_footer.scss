@@ -1,0 +1,52 @@
+/* Footer */
+
+.full-top-footer {
+	padding: 2.5rem 0 2.5rem;
+	.menu-centered > .footer-social {
+    display: inline-block;
+	}
+	[type='email'], [type='text'] {
+		background: $secondary-color;
+		border: 1px solid #efb22b;
+	}
+	::-webkit-input-placeholder {
+   		color: $white;
+	}
+	form {
+		padding-bottom: 1.875rem;
+	}
+	.footer-social {
+		padding: 0 0 1.875rem;
+		@include menu-base;
+		li a {
+			padding: .7rem .5rem;
+		}
+	}
+	.light-head {
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+	}
+	span {
+		font-weight: 700;
+	}
+	p,a {
+		font-size: .875rem;
+	}
+
+}
+
+
+
+.full-bot-footer {
+	background: $light-gray;
+	padding-top: 1.250rem;
+	p, a {
+		font-size: .875rem;
+	}
+	a {
+		font-weight: 700;
+	}
+	img {
+		margin-bottom: 1.875rem;
+	}
+}

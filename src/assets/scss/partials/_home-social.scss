@@ -1,0 +1,33 @@
+/* HOME SOCIAL */
+.home-social {
+	color: $primary-color;
+	h4 {
+		font-weight: 300;
+		font-size: 25px;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.meta {
+		font-size: 12px;
+		margin-bottom: .5rem;
+	}
+	.headline {
+		font-weight: 800;
+		font-size: 20px;
+		line-height: 1.35rem;
+		text-transform: uppercase;
+		margin-bottom: .75rem;
+	}
+	.instagram {
+		padding-top: 1.875em;
+		.gram {
+			margin-bottom: 1rem;
+		}
+	}
+	.button {
+		min-width: 180px;
+	}
+	.events {
+		margin: 1.875rem 0rem;
+	}
+}

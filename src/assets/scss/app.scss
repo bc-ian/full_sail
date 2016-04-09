@@ -48,3 +48,21 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// Custom Styles
+@import 'partials/hero';
+@import 'partials/home-beer';
+@import 'partials/home-social';
+@import 'partials/beer-touts';
+@import 'partials/footer';
+
+.button {
+	font-weight: 800;
+	text-transform: uppercase;
+}
+p {
+	font-size: 0.9375rem;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
