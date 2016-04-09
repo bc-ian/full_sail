@@ -19,9 +19,17 @@
 		margin-bottom: .75rem;
 	}
 	.instagram {
-		padding-top: 1.875em;
+		padding-top: 1.875rem;
+		.icon {
+			margin-top: -.5rem;
+		}
 		.gram {
 			margin-bottom: 1rem;
+		}
+		.caption {
+			span {
+				font-weight: 700;
+			}
 		}
 	}
 	.button {

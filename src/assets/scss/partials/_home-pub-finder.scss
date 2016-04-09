@@ -7,6 +7,7 @@
 		color: $white;
 		line-height: 2.25rem;
 		text-transform: uppercase;
+		margin-bottom: 1.5rem;
 		.light {
 			font-weight: 300;
 		}
@@ -17,6 +18,9 @@
 	padding: 1.875rem 1rem;
 
 	background: $primary-color;
+	p {
+		margin-bottom: 1.875rem;
+	}
 	.button {
 		min-width: 180px;
 		background: $white;
@@ -25,7 +29,7 @@
 }
 .home-pub-img {
 	background: url(http://placehold.it/830x500) no-repeat;
-	height: 10.375rem;
+	height: rem-calc(166);
 }
 
 .beer-finder {
@@ -34,11 +38,15 @@
 	}
 	h3 {
 		font-size: 18px;
-		line-height: 1.5rem;
+		line-height: 1.2rem;
 		text-transform: uppercase;
 	}
 	.finder-text {
 		padding-top: 1.875rem;
 		padding-bottom: 1.875rem;
+	}
+	::-webkit-input-placeholder {
+   		color: $secondary-color;
+   		text-align: center;
 	}
 }

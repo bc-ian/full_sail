@@ -2,6 +2,21 @@
 
 .beer-touts {
 	padding: 1.875rem 0 0;
+	.chev {
+    	position: relative;
+	}
+	.chev > i {
+	    position: absolute;
+	    display: inline-block;
+	    width: 0;
+	    height: 0;
+	    line-height: 0;
+	    border: .69em solid $secondary-color;
+	    border-right: .69em solid transparent;
+	    left: 0em;
+	    top: 0em;
+	}
+
 }
 .beer-tout {
 	padding-bottom: 1.875rem;
@@ -19,9 +34,14 @@
 }
 .tout-label {
 		margin: 1.563rem 0 1.5rem .938rem;
-		padding-right: 1.5rem;
 		text-transform: uppercase;
 		font-weight: 800;
 		background: $secondary-color;
 		line-height: .9;
-	}
+		border-radius: 0px;
+		padding-right: 0;
+}
+
+.tout-label:before {
+	border-top: 50px solid transparent;
+}
