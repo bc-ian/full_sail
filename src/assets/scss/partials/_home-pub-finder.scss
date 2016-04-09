@@ -3,6 +3,9 @@
 .beer-bg {
 	background: #eeaf00;
 	color: $white;
+	@include breakpoint(medium) {
+			padding-top: rem-calc(60);
+		}
 	h2 {
 		color: $white;
 		line-height: 2.25rem;
@@ -11,12 +14,14 @@
 		.light {
 			font-weight: 300;
 		}
+		@include breakpoint(medium) {
+			line-height: 3rem;
+		}
 	}
 }
 
 .home-pub-info {
 	padding: 1.875rem 1rem;
-
 	background: $primary-color;
 	p {
 		margin-bottom: 1.875rem;
@@ -25,6 +30,13 @@
 		min-width: 180px;
 		background: $white;
 		color: $primary-color;
+	}
+	.pub-img {
+		background: url(http://placeholder.it/800x300) no-repeat;
+		background-size: cover;
+	}
+	@include breakpoint (medium) {
+		padding: 0rem 1rem;
 	}
 }
 .home-pub-img {
