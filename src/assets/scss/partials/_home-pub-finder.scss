@@ -5,6 +5,7 @@
 	color: $white;
 	@include breakpoint(medium) {
 			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
 		}
 	h2 {
 		color: $white;
@@ -18,33 +19,45 @@
 			line-height: 3rem;
 		}
 	}
-}
 
-.home-pub-info {
-	padding: 1.875rem 1rem;
-	background: $primary-color;
+	.home-pub-info {
+		padding: 1.875rem 1rem;
+		background: $primary-color;
 	p {
 		margin-bottom: 1.875rem;
 	}
-	.button {
-		min-width: 180px;
-		background: $white;
-		color: $primary-color;
-	}
-	.pub-img {
-		background: url(http://placeholder.it/800x300) no-repeat;
-		background-size: cover;
-	}
+		.button {
+			min-width: 180px;
+			background: $white;
+			color: $primary-color;
+		}
 	@include breakpoint (medium) {
-		padding: 0rem 1rem;
+		padding: 0rem 0rem 0rem 0rem;
+		border-radius: $global-radius;
+		.pub-text {
+			padding: 5.625rem 1rem;
+		}
+		.pub-img {
+			background: url(http://placehold.it/800x500) no-repeat;
+			background-size: cover;
+			padding: 0rem;
+			margin: 0rem;
+			border-top-right-radius: $global-radius;
+			border-bottom-right-radius: $global-radius;
+		}
 	}
+	}
+
 }
 .home-pub-img {
 	background: url(http://placehold.it/830x500) no-repeat;
 	height: rem-calc(166);
 }
-
 .beer-finder {
+	position: relative;
+	@include breakpoint (medium) {
+		margin-top: 1.875rem;
+	}
 	.finder-img{
 		padding-top: 2.5rem;
 	}
@@ -52,13 +65,26 @@
 		font-size: 18px;
 		line-height: 1.2rem;
 		text-transform: uppercase;
+		@include breakpoint (medium) {
+			font-size: rem-calc(50);
+			line-height: 3rem;
+			margin-top: 1rem;
+		}
+		@include breakpoint (large) {
+			margin-top: 6rem;
+		}
+	}
+	p {
+		@include breakpoint (medium) {
+			font-size: rem-calc(23);
+		}
 	}
 	.finder-text {
 		padding-top: 1.875rem;
 		padding-bottom: 1.875rem;
-	}
-	::-webkit-input-placeholder {
-   		color: $secondary-color;
-   		text-align: center;
+		::-webkit-input-placeholder {
+	   		color: $secondary-color;
+	   		text-align: center;
+		}
 	}
 }
