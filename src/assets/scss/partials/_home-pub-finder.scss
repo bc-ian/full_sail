@@ -1,7 +1,7 @@
 /* BEER BACKGROUND */
 
 .beer-bg {
-	background: #eeaf00;
+	background: linear-gradient($white 50%, #eeaf00 70%);
 	color: $white;
 	@include breakpoint(medium) {
 			padding-top: rem-calc(60);
