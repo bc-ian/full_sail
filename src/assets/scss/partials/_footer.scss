@@ -32,6 +32,16 @@
 	p,a {
 		font-size: .875rem;
 	}
+	.menu > li > a {
+		padding: .3rem 0rem;
+	}
+	.link-list {
+		padding-left: 0rem;
+	}
+
+	@include breakpoint (medium) {
+		border-top: $light-gray solid 2px;
+	}
 
 }
 

@@ -23,6 +23,20 @@
 	h4 {
 		font-size: rem-calc(25);
 		margin-left: .938rem;
+		.light {
+			font-weight: 300;
+			font-size: rem-calc(30);
+		}
+		@include breakpoint (medium) {
+			font-size: rem-calc(45);
+		}
+	}
+	p {
+		margin: 1rem .938rem;
+
+	}
+	.button {
+		margin-left: .938rem;
 	}
 }
 .beer-tout-bg {
@@ -30,6 +44,9 @@
 	.tout-beer {
 		margin: -.625rem 0 0 .438rem;
 		padding-bottom: .5rem;
+		@include breakpoint (medium) {
+			margin: -1.3rem 0 0 .438rem;
+		}
 	}
 }
 .tout-label {
