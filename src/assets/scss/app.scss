@@ -57,6 +57,9 @@
 @import 'partials/footer';
 @import 'partials/site-icons';
 
+.off-canvas-wrapper {
+	overflow-y: hidden;
+}
 .button {
 	font-weight: 800;
 	text-transform: uppercase;
@@ -66,4 +69,8 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
+}
+
+::selection {
+	background: $secondary-color;
 }
