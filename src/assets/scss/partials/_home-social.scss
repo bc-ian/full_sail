@@ -36,6 +36,14 @@
 				font-weight: 700;
 			}
 		}
+		@include breakpoint (medium) {
+			.insta-follow {
+				margin: 3.25rem 0 0;
+				text-transform: uppercase;
+				font-weight: 800;
+				font-size: .8rem;
+			}
+		}
 	}
 	.home-post {
 		h4 {
