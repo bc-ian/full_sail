@@ -3,12 +3,17 @@
 	color: $primary-color;
 	h4 {
 		font-weight: 300;
-		font-size: 25px;
+		font-size: rem-calc(25);
 		text-transform: uppercase;
 		margin-bottom: 1rem;
+		@include breakpoint (medium) {
+			font-size: rem-calc(50);
+			margin: 2.5rem 0;
+		}
+
 	}
 	.meta {
-		font-size: 12px;
+		font-size: rem-calc(12);
 		margin-bottom: .5rem;
 	}
 	.headline {
@@ -30,6 +35,14 @@
 			span {
 				font-weight: 700;
 			}
+		}
+	}
+	.home-post {
+		h4 {
+			margin: 0 0;
+		}
+		@include breakpoint (medium) {
+			margin-bottom: 3.75rem;
 		}
 	}
 	.button {
