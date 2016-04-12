@@ -3,19 +3,34 @@
 	padding: 1.875rem 0 0;
 	.chev {
     	position: relative;
+    	margin: 1.563rem 0 1.5rem .938rem;
+    	top: 1rem;
+    	@include breakpoint (medium) {
+    		top: 2rem;
+    	}
+    	@include breakpoint (large) {
+			margin: 2rem 0 3rem 2.7rem;
+    	}
 	}
 	.chev > i {
 	    position: absolute;
 	    display: inline-block;
-	    width: 0;
+	    width: 75px;
 	    height: 0;
 	    line-height: 0;
-	    border: .69em solid $secondary-color;
-	    border-right: .69em solid transparent;
+	    border: 0.8rem solid $secondary-color;
+	    border-right: 0.8rem solid transparent;
 	    left: 0em;
-	    top: 0em;
+	    top: 0rem;
+	    font-style: normal;
+	    font-weight: 800;
+	    font-size: .8rem;
+	    text-transform: uppercase;
+	    color: $white;
+	    @include breakpoint (large) {
+	    	top: 0.05rem;
+	    }
 	}
-
 	@include breakpoint (large) {
 		margin-bottom: 4.250rem;
 	}
@@ -26,15 +41,22 @@
 	h4 {
 		font-size: rem-calc(25);
 		margin-left: .938rem;
+		margin-top: 2.5rem;
 		.light {
 			font-weight: 300;
 			font-size: rem-calc(30);
 		}
 		@include breakpoint (medium) {
 			font-size: rem-calc(45);
+			margin-top: 0rem;
 		}
 		@include breakpoint (large) {
 			margin-left: 2.5rem;
+		}
+	}
+	.fs-label {
+		@include breakpoint (medium) {
+			margin-top: 3rem;
 		}
 	}
 	p {
@@ -78,7 +100,4 @@
 		@include breakpoint (large) {
 			margin-left: 2.5rem;
 		}
-}
-.tout-label:before {
-	border-top: 50px solid transparent;
 }
