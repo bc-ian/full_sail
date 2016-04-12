@@ -45,7 +45,9 @@
 		text-transform: uppercase;
 		font-size: rem-calc(14);
 	}
-	.menu {
+
+
+	.fs-menu {
 	background: linear-gradient(to right, $primary-color 30%, rgba(18, 36, 84, 0.2) 50%, $primary-color 70%);
 	border-top: 1px solid transparent;
 	border-image: linear-gradient(to right, $primary-color 30%, rgba(18, 36, 84, 0.2) 50%, $primary-color 70%);
