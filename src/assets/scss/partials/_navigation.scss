@@ -33,7 +33,7 @@
 .large-menu {
 	position: absolute;
 	color: $white;
-	z-index: 99;
+	z-index: 5;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -49,13 +49,15 @@
 	background: linear-gradient(to right, $primary-color 30%, rgba(18, 36, 84, 0.2) 50%, $primary-color 70%);
 	border-top: 1px solid transparent;
 	border-image: linear-gradient(to right, $primary-color 30%, rgba(18, 36, 84, 0.2) 50%, $primary-color 70%);
+	border-bottom: 0px;
 	box-shadow: inset 0 1px 0 #0063a7;
+	z-index: 99;
 	.nav-logo {
 		text-indent: -999999px;
 		width: 325px;
+		}
 	}
-}
-.nav-logo-image {
+	.nav-logo-image {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -64,5 +66,57 @@
 	z-index: 999;
 	top: -30px;
 	}
+.ribbon:before, 
+.ribbon:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: 17px;
+    @include breakpoint (1159) {
+    	bottom: 30px;
+    }
+
+	}
+
+.ribbon:before {
+    border-width: 0 20px 10px 0;
+    border-right-color: #030918;
+    left: -408px;
+	}
+.ribbon:after {
+	border-width: 0 0 10px 20px;
+    border-left-color: #030918;
+    right: -408px;
+	}
+.ribbon-angle {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 325px;
+	z-index: -1;
+	top: 10px;
+}
+.ribbon-angle:before,
+.ribbon-angle:after {
+	content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+}
+.ribbon-angle:before {
+	width: 56px;
+    border-top: 37px solid #0d1c43;
+   	border-left: 10px solid transparent;
+   	left: -441px;
+}
+.ribbon-angle:after {
+	width: 56px;
+    border-top: 37px solid #0d1c43;
+   	border-right: 10px solid transparent;
+   	right: -441px;
+}
+
 }
 
