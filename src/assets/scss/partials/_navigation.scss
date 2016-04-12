@@ -122,3 +122,15 @@
 
 }
 
+.menu-icon {
+	position: absolute;
+	z-index: 999;
+	top: 1rem;
+	right: 1rem;
+	width: 30px;
+}
+.menu-icon:after {
+	background: $white;
+	box-shadow: 0 8px 0 $white, 0 16px 0 $white;
+	height: 4px;
+}
