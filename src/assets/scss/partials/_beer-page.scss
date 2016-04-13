@@ -1,0 +1,94 @@
+/* BEER PAGE */
+.beer-page {
+	.beer-touts {
+		margin-bottom: 2rem;
+	}
+
+.beer-nav {
+	background: $primary-color;
+	color: $white;
+	margin-bottom: rem-calc(60);
+	a {
+		color: $white;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.active {
+			color: $secondary-color;
+	}
+	.beer-menu {
+		@include menu-simple;
+		@include breakpoint(medium) {
+			margin: rem-calc(25) 0rem;
+			a {
+				margin-right: rem-calc(20);
+			}
+		}
+	}
+	.menu {
+		margin: rem-calc(20) 0;
+	}
+}
+	.beer-info-r {
+		background: $primary-color;
+		color: $white;
+		margin-bottom: rem-calc(60);
+		.image {
+			background: url(http://placehold.it/960x400) no-repeat;
+			background-size: cover;
+		}
+		.info {
+			padding-top: rem-calc(20);
+			padding-left: rem-calc(20);
+			@include breakpoint (medium) {
+				padding: rem-calc(40) 0rem rem-calc(40) rem-calc(30);
+			}
+		}
+		p {
+			max-width: rem-calc(520);
+		}
+		h2 {
+			span {
+				font-weight: 300;
+				font-size: rem-calc(32);
+			}
+		}
+		.button {
+			background: $white;
+			color: $primary-color;
+			margin-bottom: 0rem;
+		}
+	}
+	.beer-info-l {
+		background: $primary-color;
+		color: $white;
+		margin-bottom: 2rem;
+		@include breakpoint (medium) {
+		background: $primary-color url(http://placehold.it/1300x1000) right no-repeat;
+		background-size: 49% auto;
+		}
+		.full {
+			padding-left: 0rem;
+			padding-right: 0rem;
+		}
+		h2 {
+			span {
+				font-weight: 300;
+				font-size: rem-calc(32);
+			}
+		}
+		.info {
+			padding-top: rem-calc(20);
+			@include breakpoint (medium) {
+				padding: rem-calc(40) 0rem rem-calc(40) 0rem;
+			}
+			.button {
+				color: $primary-color;
+				background: $white;
+			}
+		}
+	}
+	.full-top-footer {
+		border-top: none;
+	}
+}

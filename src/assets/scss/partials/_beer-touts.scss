@@ -1,41 +1,50 @@
 /* BEER TOUTS */
-.beer-touts {
+
+// THIS MIXIN IS USED TO CREATE THE SERIES FLAGS ON THE BEER TOUTS
+@mixin series-flag ($background, $width) {
+    position: relative;
+    margin: 1.563rem 0 1.5rem .938rem;
+    top: 1rem;
+    @include breakpoint (medium) {
+    	top: 2rem;
+    	margin-right: 5rem;
+    }
+    @include breakpoint (large) {
+		margin: 2rem 3rem 3rem 2.7rem;
+    }
+    	> i {
+    		position: absolute;
+		    display: inline-block;
+		    width: $width;
+		    height: 0;
+		    line-height: 0;
+		    border: 0.8rem solid $background;
+		    border-right: 0.8rem solid transparent;
+		    left: 0em;
+		    top: 0rem;
+		    font-style: normal;
+		    font-weight: 800;
+		    font-size: .8rem;
+		    text-transform: uppercase;
+		    color: $white;
+		    @include breakpoint (large) {
+		    	top: 0.05rem;
+		    }
+		}
+		@include breakpoint (large) {
+			margin-bottom: 4.250rem;
+		}
+}
+// FLAG COLORS
+$core: $secondary-color;
+$pub: #f94b0b;
+$brewmaster: #7ca4ae;
+
+.beer-tout-row {
 	padding: 1.875rem 0 0;
-	.chev {
-    	position: relative;
-    	margin: 1.563rem 0 1.5rem .938rem;
-    	top: 1rem;
-    	@include breakpoint (medium) {
-    		top: 2rem;
-    		margin-right: 5rem;
-    	}
-    	@include breakpoint (large) {
-			margin: 2rem 3rem 3rem 2.7rem;
-    	}
-	}
-	.chev > i {
-	    position: absolute;
-	    display: inline-block;
-	    width: 75px;
-	    height: 0;
-	    line-height: 0;
-	    border: 0.8rem solid $secondary-color;
-	    border-right: 0.8rem solid transparent;
-	    left: 0em;
-	    top: 0rem;
-	    font-style: normal;
-	    font-weight: 800;
-	    font-size: .8rem;
-	    text-transform: uppercase;
-	    color: $white;
-	    @include breakpoint (large) {
-	    	top: 0.05rem;
-	    }
-	}
 	@include breakpoint (large) {
 		margin-bottom: 4.250rem;
 	}
-
 }
 .beer-tout {
 	padding-bottom: 1.875rem;
@@ -75,8 +84,19 @@
 		}
 	}
 }
-.beer-tout-bg {
-	background: $light-gray;
+.core-flag {
+	@include series-flag($core, 75px);
+}
+.pub-flag {
+	@include series-flag($pub, 120px);
+}
+.brewmaster-flag {
+	@include series-flag($brewmaster, 200px);
+}
+
+// THIS MIXIN CREATES THE BASE BACKGROUND OF THE TOUT, GIVE THE TOUT THE NAME OF THE BACKGROUND YOU WANT IT TO HAVE
+@mixin beer-background ($beer-bg) {
+	background: $light-gray url($beer-bg) bottom repeat-x;
 	border-radius: $global-radius;
 	.tout-beer {
 		margin: -.625rem 0 0 .438rem;
@@ -90,15 +110,52 @@
 		}
 	}
 }
-.tout-label {
-		margin: 1.563rem 0 1.5rem .938rem;
-		text-transform: uppercase;
-		font-weight: 800;
-		background: $secondary-color;
-		line-height: .9;
-		border-radius: 0px;
-		padding-right: 0;
-		@include breakpoint (large) {
-			margin-left: 2.5rem;
-		}
+.gorge-bg {
+	@include beer-background('../img/bt-core-bg.png');
 }
+.hood-bg {
+	@include beer-background('../img/bt-hood-bg.jpg');
+}
+.tree-bg {
+	@include beer-background('../img/bt-core-bg.png');
+}
+.hops-bg {
+	@include beer-background('../img/bt-core-bg.png');
+}
+.farm-bg {
+	@include beer-background('../img/bt-core-bg.png');
+}
+
+
+
+
+
+
+// .tout-label {
+// 		margin: 1.563rem 0 1.5rem .938rem;
+// 		text-transform: uppercase;
+// 		font-weight: 800;
+// 		background: $secondary-color;
+// 		line-height: .9;
+// 		border-radius: 0px;
+// 		padding-right: 0;
+// 		@include breakpoint (large) {
+// 			margin-left: 2.5rem;
+// 		}
+// }
+
+// .beer-tout-holder {
+// 	background: $light-gray url(../img/bt-core-bg.png) bottom repeat-x;
+// 	border-radius: $global-radius;
+// 	.tout-beer {
+// 		margin: -.625rem 0 0 .438rem;
+// 		padding-bottom: .5rem;
+// 		@include breakpoint (medium) {
+// 			margin: -1.3rem 0 0 .438rem;
+// 		}
+// 		@include breakpoint (large) {
+// 			margin: -2.6rem 0 0 1.5rem;
+// 			padding: 0 0 1.5rem 0;
+// 		}
+// 	}
+// }
